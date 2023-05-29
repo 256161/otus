@@ -7,6 +7,8 @@ project(OneWorkPlace VERSION ${PROJECT_VESRION})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
+configure_file(pragmaversion.h.in pragmaversion.h)
+
 add_executable(OneWorkPlace_pr main.cpp)
 add_library(libVersion libVersion.cpp)
 add_executable(boost_test_version boost_test_version.cpp)
@@ -31,9 +33,7 @@ target_link_libraries(boost_test_version
     ${Boost_LIBRARIES}
     libVersion
 )
-target_link_libraries(libVersion PRIVATE
-boost_test_version
-)
+
 
 install(TARGETS OneWorkPlace_pr RUNTIME DESTINATION bin)
 

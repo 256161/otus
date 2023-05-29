@@ -1,5 +1,6 @@
 #define BOOST_TEST_MODULE test_version
 
+#define PROJECT_VERSION_PATCH @PROJECT_VERSION_PATCH@
 #include "libVersion.h"
 
 #include <boost/test/unit_test.hpp>

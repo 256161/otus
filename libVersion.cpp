@@ -1,9 +1,6 @@
 #include "libVersion.h"
-
-
-
-#include "boost_test_version.cpp"
+#include "pragmaversion.h"
 
 int version() {
-    return @PROJECT_VERSION_PATCH@;
+    return PROJECT_VERSION_PATCH;
 }
